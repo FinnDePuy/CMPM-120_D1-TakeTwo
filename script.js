@@ -28,7 +28,7 @@ class sceneOne extends Phaser.Scene {
         }, this);
         song.play();
         window.addEventListener('load', function() {
-            audio.resume();
+            song.resume();
         });
         //function setup(){
         //    mic = new p5.AudioIn;
@@ -37,12 +37,12 @@ class sceneOne extends Phaser.Scene {
         //}
         this.input.once('pointerdown', function () 
         {
-            audio.once('pause', function(sound){
+            song.once('pause', function(sound){
                 this.time.addEvent({
                     delay:1500
                 })
             },this);
-            audio.pause();
+            song.pause();
             console.log('From sceneOne to sceneTwo');
             this.scene.start('sceneTwo');
         }, this);
@@ -104,12 +104,12 @@ class sceneThree extends Phaser.Scene {
         this.graphics = this.add.graphics();
         this.input.once('pointerdown', function (event)
         {
-            audio.once('pause', function(sound){
+            song.once('pause', function(sound){
                 this.time.addEvent({
                     delay:1500
                 })
             },this);
-            audio.pause();
+            song.pause();
             console.log('From sceneThree to sceneOne');
             this.scene.start('sceneOne');
         }, this);
