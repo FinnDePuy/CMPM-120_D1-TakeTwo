@@ -125,7 +125,7 @@ const config = {
     parent: 'phaser-example',
     scene: [ sceneOne, sceneTwo, sceneThree],
     audio: {
-        disableWebAudio: false
+        disableWebAudio: true
     }
 };
 
