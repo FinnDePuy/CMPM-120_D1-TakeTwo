@@ -9,6 +9,7 @@ class sceneOne extends Phaser.Scene {
         this.load.image('GiraffeOne','Giraffe.png');
     }
     create(){
+        this.sound.pauseOnBlue = false;
         var audio = this.sound.add('ImAGiraffe', {loop: false});
         this.graphics = this.add.graphics();
         const Giraffe = this.add.image(100,500,'GiraffeOne');
