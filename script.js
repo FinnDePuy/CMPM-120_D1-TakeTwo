@@ -27,7 +27,9 @@ class sceneOne extends Phaser.Scene {
             });
         }, this);
         audio.play();
-        function touchStarted() {
+        function setup(){
+            mic = new p5.AudioIn;
+            mic.start();
             getAudioContext().resume();
         }
         this.input.once('pointerdown', function () 
