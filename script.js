@@ -21,15 +21,15 @@ class sceneOne extends Phaser.Scene {
             repeat: 0,
             duration: 1000
         });
-        window.addEventListener('load', function() {
-            audio.resume();
-        });
         audio.once('play', function (sound){
             this.time.addEvent({
                 delay: 2000
             });
         }, this);
         audio.play();
+        window.addEventListener('load', function() {
+            audio.resume();
+        });
         //function setup(){
         //    mic = new p5.AudioIn;
         //    mic.start();
