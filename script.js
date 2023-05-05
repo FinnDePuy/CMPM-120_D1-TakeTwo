@@ -10,7 +10,7 @@ class sceneOne extends Phaser.Scene {
     }
     create(){
         this.sound.pauseOnBlue = false;
-        var audio = this.sound.add('ImAGiraffe', {loop: false});
+        var song = this.sound.add('ImAGiraffe', {loop: false});
         this.graphics = this.add.graphics();
         const Giraffe = this.add.image(100,500,'GiraffeOne');
         this.add.text(500,300, 'Giraffe Studios', {fontSize: 20});
@@ -22,12 +22,12 @@ class sceneOne extends Phaser.Scene {
             repeat: 0,
             duration: 1000
         });
-        audio.once('play', function (sound){
+        song.once('play', function (sound){
             this.time.addEvent({
                 delay: 2000
             });
         }, this);
-        audio.play();
+        song.play();
         window.addEventListener('load', function() {
             audio.resume();
         });
@@ -87,7 +87,7 @@ class sceneThree extends Phaser.Scene {
         this.load.image('Title', 'Giraffe Simulator (1).png');
     }
     create(){
-        var audio = this.sound.add('HolderSong', {loop: true});
+        var song = this.sound.add('HolderSong', {loop: true});
         this.add.image(300,350,'GiraffeTwo');
         var title = this.add.image(375, 75, 'Title');
         title.setScale(title.height/290);
@@ -96,12 +96,12 @@ class sceneThree extends Phaser.Scene {
             camera.fadeOut(6000);
         });
         this.cameras.main.fadeIn(6000);
-        audio.once('play', function (sound){
+        song.once('play', function (sound){
             this.time.addEvent({
                 delay: 2000
             });
         }, this);
-        audio.play();
+        song.play();
         this.graphics = this.add.graphics();
         this.input.once('pointerdown', function (event)
         {
@@ -128,5 +128,4 @@ const config = {
         disableWebAudio: true
     }
 };
-
 const game = new Phaser.Game(config);
