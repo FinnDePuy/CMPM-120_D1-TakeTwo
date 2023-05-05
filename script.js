@@ -21,9 +21,9 @@ class sceneOne extends Phaser.Scene {
             duration: 1000
         });
         audio.once('play', function (sound){
-            this.time.addEvent({
-                delay: 2000
-            });
+            //this.time.addEvent({
+            //    delay: 2000
+            //});
         }, this);
         audio.play();
         this.input.once('pointerdown', function () 
