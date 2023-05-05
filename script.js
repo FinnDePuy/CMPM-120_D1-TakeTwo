@@ -1,5 +1,5 @@
 class sceneOne extends Phaser.Scene {
-    
+
     constructor() {
         super({key : 'sceneOne'});
     }
@@ -26,6 +26,9 @@ class sceneOne extends Phaser.Scene {
             //    delay: 2000
             //});
         }, this);
+        function touchStarted() {
+            getAudioContext().resume();
+        }
         audio.play();
         this.input.once('pointerdown', function () 
         {
