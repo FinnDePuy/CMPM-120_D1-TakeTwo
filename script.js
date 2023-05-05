@@ -28,12 +28,6 @@ class sceneOne extends Phaser.Scene {
         audio.play();
         this.input.once('pointerdown', function () 
         {
-            audio.once('pause', function(sound){
-                this.time.addEvent({
-                    delay:1500
-                })
-            },this);
-            audio.pause();
             console.log('From sceneOne to sceneTwo');
             this.scene.start('sceneTwo');
         }, this);
