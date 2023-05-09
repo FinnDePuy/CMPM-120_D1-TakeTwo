@@ -3,7 +3,7 @@ class sceneOne extends Phaser.Scene {
         super({key : 'sceneOne'});
     }
     preload(){
-        this.load.path = './assets/';
+        this.load.path = './Assets/';
         this.load.audio('ImAGiraffe', 'ImaGiraffe.mp3');
         this.load.image('GiraffeOne','Giraffe.png');
     }
