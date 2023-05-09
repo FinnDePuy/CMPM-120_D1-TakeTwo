@@ -54,7 +54,7 @@ class sceneTwo extends Phaser.Scene {
         super({key : 'sceneTwo'});
     }
     preload(){
-        this.load.path = './assets/';
+        this.load.path = './Assets/';
         this.load.image('Tree','Tree.png');
     }
     create(){
@@ -80,7 +80,7 @@ class sceneThree extends Phaser.Scene {
         super({key : 'sceneThree'});
     }
     preload(){
-        this.load.path = './assets/';
+        this.load.path = './Assets/';
         this.load.audio('HolderSong', 'HolderSong.mp3'); 
         this.load.image('GiraffeTwo','Giraffe2.png');   
         this.load.image('Title', 'Giraffe Simulator (1).png');
