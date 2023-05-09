@@ -6,6 +6,7 @@ class sceneOne extends Phaser.Scene {
         this.load.path = './Assets/';
         this.load.audio('ImAGiraffe', 'ImaGiraffe.mp3');
         this.load.image('GiraffeOne','Giraffe.png');
+        
     }
     create(){
         this.sound.pauseOnBlue = false;
